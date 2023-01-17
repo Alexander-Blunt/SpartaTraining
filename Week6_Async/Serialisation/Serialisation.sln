@@ -5,6 +5,11 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialisationApp", "SerialisationApp\SerialisationApp.csproj", "{DC2D7842-F8DA-4824-8924-EB98DF5EFC3C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BC7222D-6D65-4A0D-A91C-3CAE8C10358F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\Documents\SpartaDocs\BinaryJoe.bin = ..\..\..\..\..\..\Documents\SpartaDocs\BinaryJoe.bin
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
