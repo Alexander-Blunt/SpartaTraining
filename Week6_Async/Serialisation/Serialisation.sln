@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BC7222D-6D65-4A0D-A91C-3CAE8C10358F}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\..\..\Documents\SpartaDocs\BinaryJoe.bin = ..\..\..\..\..\..\Documents\SpartaDocs\BinaryJoe.bin
+		..\..\..\..\..\..\Documents\SpartaDocs\XMLJoe.xml = ..\..\..\..\..\..\Documents\SpartaDocs\XMLJoe.xml
 	EndProjectSection
 EndProject
 Global
