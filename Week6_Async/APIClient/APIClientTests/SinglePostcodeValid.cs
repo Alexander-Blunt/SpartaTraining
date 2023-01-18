@@ -1,18 +1,16 @@
-using APIClientApp;
-using RestSharp;
-using Newtonsoft.Json.Linq;
 using APIClientApp.PostcodesIOService;
 
 namespace APIClientTests;
 
 public class WhenTheSinglePostcodeServiceIsCalled_WithValidPostcode
 {
+    CallManager _callManager;
     SinglePostcodeService _singlePostcodeService;
 
     [OneTimeSetUp]
     public async Task OneTimeSetUpAsync()
     {
-        CallManager _callManager = new();
+        _callManager = new CallManager();
         _singlePostcodeService = new SinglePostcodeService(_callManager);
         await _singlePostcodeService.MakeRequestAsync("EC2Y 5AS");
     }
@@ -30,7 +28,7 @@ public class WhenTheSinglePostcodeServiceIsCalled_WithValidPostcode
     [Test]
     public void StatusIs200_OnObject()
     {
-        Assert.That((int)_singlePostcodeService.ResponseObject.Response.status, Is.EqualTo(200));
+        Assert.That((int)_singlePostcodeService.ResponseObject.Response.Status, Is.EqualTo(200));
     }
 
     [Test]

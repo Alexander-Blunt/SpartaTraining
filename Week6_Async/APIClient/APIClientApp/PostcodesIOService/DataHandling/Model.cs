@@ -9,14 +9,16 @@ namespace APIClientApp.PostcodesIOService;
 
 public class SinglePostcodeResponse : IResponse
 {
-    public int status { get; set; }
+    [JsonProperty("status")]
+    public int Status { get; set; }
     [JsonProperty("result")]
     public Postcode Postcode { get; set; }
 }
 
 public class BulkPostcodeResponse
 {
-    public int status { get; set; }
+    [JsonProperty("status")]
+    public int Status { get; set; }
     [JsonProperty("result")]
     public IndividualResponse[] Responses { get; set; }
 }
