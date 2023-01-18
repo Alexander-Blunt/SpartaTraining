@@ -15,7 +15,7 @@ public class SinglePostcodeResponse : IResponse
     public Postcode Postcode { get; set; }
 }
 
-public class BulkPostcodeResponse
+public class BulkPostcodeResponse :IResponse
 {
     [JsonProperty("status")]
     public int Status { get; set; }

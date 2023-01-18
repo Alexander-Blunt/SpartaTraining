@@ -13,14 +13,14 @@ public class Program
         var postcode = GetSinglePostcode("EC2Y5AS");
         Console.WriteLine(postcode.Postcode.admin_district);
 
-        var postcodes = GetMultiplePostcodes(new string[] { "PR3 0SG", "M45 6GN", "EX165BL" });
+        var postcodes = GetBulkPostcodes(new string[] { "PR3 0SG", "M45 6GN", "EX165BL" });
         foreach (var response in postcodes.Responses)
         {
             Console.WriteLine(response.Postcode.admin_district);
         }
     }
 
-    public static BulkPostcodeResponse GetMultiplePostcodes(string[] postcodes)
+    public static BulkPostcodeResponse GetBulkPostcodes(string[] postcodes)
     {
         var client = new RestClient("https://api.postcodes.io/postcodes");
         var request = new RestRequest();

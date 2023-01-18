@@ -1,9 +1,4 @@
 ﻿using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace APIClientApp.PostcodesIOService;
 
@@ -31,6 +26,22 @@ public class CallManager
         request.AddHeader("Content-Type", "application/json");
         request.Timeout = -1;
         request.Resource = $"postcodes/{postcode.Replace(" ", "")}";
+
+        RestResponse = await _client.ExecuteAsync(request);
+
+        return RestResponse.Content;
+    }
+
+    public async Task<string> MakePostcodeRequestAsync(string[] postcodes)
+    {
+        //build the request
+        var request = new RestRequest();
+        request.Method = Method.Post;
+        request.AddHeader("Content-Type", "application/json");
+        request.Timeout = -1;
+        request.Resource = "postcodes/";
+        request.AddJsonBody(postcodes);
+
 
         RestResponse = await _client.ExecuteAsync(request);
 
