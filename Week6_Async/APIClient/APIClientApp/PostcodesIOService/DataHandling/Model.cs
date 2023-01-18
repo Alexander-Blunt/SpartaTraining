@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace APIClientApp;
+namespace APIClientApp.PostcodesIOService;
 
-public class SinglePostcodeResponse
+public class SinglePostcodeResponse : IResponse
 {
     public int status { get; set; }
     [JsonProperty("result")]
