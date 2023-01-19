@@ -40,8 +40,7 @@ public class CallManager
         request.AddHeader("Content-Type", "application/json");
         request.Timeout = -1;
         request.Resource = "postcodes/";
-        request.AddJsonBody(postcodes);
-
+        request.AddJsonBody(new { Postcodes = postcodes });
 
         RestResponse = await _client.ExecuteAsync(request);
 
