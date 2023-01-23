@@ -104,7 +104,7 @@ namespace NorthwindTests
         }
 
         [Test]
-        public void ContainNullSelectedCustomer_WhenDeleteIsCalled_WithValidId()
+        public void ContainsNullSelectedCustomer_WhenDeleteIsCalled_WithValidId()
         {
             //Arrange
             var mockCustomerService = new Mock<ICustomerService>();
@@ -126,14 +126,12 @@ namespace NorthwindTests
         {
             //Arrange
             var mockCustomerService = new Mock<ICustomerService>();
-            var originalCustomer = new Customer() { CustomerId = "JSMITH" };
-
-            mockCustomerService.Setup(cs => cs.GetCustomerById("JSMITH")).Returns(originalCustomer);
+            mockCustomerService.Setup(cs => cs.GetCustomerById("JSMITH")).Returns((Customer)null);
 
             _sut = new CustomerManager(mockCustomerService.Object);
 
             //Act
-            var result = _sut.Delete("NOTJSMITH");
+            var result = _sut.Delete("JSMITH");
 
             //Assert
             Assert.That(result, Is.False);
