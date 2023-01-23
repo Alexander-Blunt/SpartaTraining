@@ -1,8 +1,4 @@
 ﻿using Moq;
-using NorthwindBusiness;
-using NorthwindData.Services;
-using NorthwindData;
-using NUnit.Framework;
 using System.Data;
 
 namespace NorthwindTests.CustomerManagerTests
