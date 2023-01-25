@@ -1,21 +1,57 @@
+* {
+    margin: 10px;
+    padding: 1px;
+    font-family: fantasy;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    background-color: darkslateblue;
+}
+
+.nav-button {
+    display: block;
+    margin: 0;
+    font-size: 1.4rem;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: antiquewhite;
+    text-decoration-line: unset;
+}
+
+.nav-button:hover {
+    background-color: rgb(56, 47, 117);
+}
+
+.active {
+    background-color: lightblue;
+    color: darkslategray;
+}
+
+.active:hover {
+    background-color: lightblue;
+    color: darkslategray;
+}
+
 header {
     background-color: royalblue;
     color: beige;
+    margin-top: 1rem;
     min-width: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    height: fit-content;
     border: dotted gold 10px;
 }
 
 header img {
-    align-self: flex-end;
-}
-
-p {
-    font-size: 1.2rem;
+    float: right;
 }
 
 #myskills {
@@ -24,28 +60,6 @@ p {
     color: fuchsia;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    background-color: darkslateblue;
-}
-
-.nav-button {
-    display: block;
-    color: antiquewhite;
-    text-decoration-line: unset;
-    font-size: 1.5rem;
-    margin: 0;
-    height: 2rem;
-}
-
-.active {
-    background-color: lightblue;
-    color: darkslategray;
-}
 
 .subheading {
     text-decoration: underline rebeccapurple 2px;
@@ -57,19 +71,9 @@ nav {
     height: 12;
 }
 
-* {
-    margin: 10px;
-    padding: 1px;
-    font-family: fantasy;
-}
-
 .box1 {
     background-color: aqua;
     margin: 15px 1rem;
-}
-
-.container {
-    max-width: 540px;
 }
 
 input[type="submit"] {
